@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  #mobile-menu {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    box-shadow: 0 2px rgba(0,0,0,.07);
+    
+    & img {
+      width: 192px;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+  .hamburger {
+    position: relative;
+  /*   display: inline-block; */
+    height: 20px;
+    width: 20px;
+    
+    & span {
+      position: absolute;
+      display: inline-block;
+      background: black;
+      height: 5px;
+      width: 100%;
+      transition: all ease-in-out .2s;
+    }
+  
+    & span:nth-child(2) {
+      width: 80%;
+    }
+    & span:nth-child(3) {
+      top: 50%;
+    }
+    & span:nth-child(4) {
+      top: 50%;
+    }
+    & span:nth-child(5) {
+      top: 100%;
+    }
+    & span:nth-child(6) {
+      top: 100%;
+      width: 120%;
+    }
+  
+    & span:nth-child(odd) {
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 25px;
+      left: 0%;
+    }
+  
+    & span:nth-child(even) {
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+      left: 50%;
+    }
+  }
+  .hamburger:hover {
+    & span:nth-child(1) {
+      transform: translateY(50%);
+    }
+    & span:nth-child(2) {
+      transform: translateY(50%);
+    }
+    & span:nth-child(5) {
+      transform: translateY(-50%);
+    }
+    & span:nth-child(6) {
+      transform: translateY(-50%);
+    }
+  }
+  .active {
+    & span:nth-child(3) {
+      left: -100%;
+      opacity: 0;
+    }
+    & span:nth-child(4) {
+      left: 140%;
+      opacity: 0;
+    }
+    & span:nth-child(1) {
+      transform: translateY(100%) translateX(-12%) rotate(45deg) !important;
+    }
+    & span:nth-child(2) {
+      width: 100%;
+      transform: translateY(100%) rotate(-45deg) !important;
+    }
+  
+    & span:nth-child(5) {
+      transform: translateY(-100%)  translateX(-12%) rotate(-45deg) !important;
+    }
+    & span:nth-child(6) {
+      width: 100%;
+      transform: translateY(-100%) rotate(45deg) !important;
+    }
+  }
+  #hidden-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    top: 100%;
+    background: red;
+  }
