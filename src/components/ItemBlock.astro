@@ -1,0 +1,23 @@
+---
+interface Props {
+    imgUrl: string;
+    imgAlt: string;
+    name: string;
+    desc: string;
+}
+
+const { imgUrl, imgAlt, name, desc } = Astro.props
+---
+
+<div class="w-full space-y-4">
+    <img src={imgUrl} alt={imgAlt}>
+    <p class="font-bold">{name}</p>
+    <p>{desc}</p>
+</div>
+<style>
+    img {
+        width: 4rem;
+        height: 4rem;
+        object-fit: contain;
+    }
+</style>

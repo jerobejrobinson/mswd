@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContentContainer from '../components/ContentContainer.astro';
+import ItemBlock from '../components/ItemBlock.astro';
+---
+
+<Layout title="Mid-South Web Designs & Development | A Marketing Service">
+	<section id="hero" class=" h-screen">
+		<ContentContainer>
+			<div class="col-span-4 sm:col-span-6 space-y-6">
+				<h1 class="text-2xl xl:text-4xl font-bold">We Make The Best Websites For Your Small Business</h1>
+				<p class="leading-loose">With our 2 - 4 week turnaround time, we can get you on the ground rolling fast. Our expertise specialize in providing websites without all of the fluff. Completely hand coded to provide you and your customers with the ultimate user experience.</p>
+				<a href="/contact" class="block px-8 py-2 bg-white text-black rounded text-center text-xl">Get In Touch</a>
+			</div>
+		</ContentContainer>
+	</section>
+	<section id="who-we-are">
+		<ContentContainer>
+			<div class="col-span-4 xl:col-span-6 space-y-6">
+				<h2 class="font-bold text-xl">Who I Am</h2>
+				<p class=" leading-relaxed">Based in Memphis, Tn we come with years of development and design experience to help your business establish web visibility. Our services are meant to provide you with complete ease as we handle design, maintenance, and updates. Think of us as part of your team completely dedicated to managing and monitoring your website.</p>
+				<a href="/about-us" class="block px-8 py-2 bg-[#002147] text-white rounded text-center text-xl xl:w-1/2 xl:text-base">Learn More</a>
+			</div>
+		</ContentContainer>
+	</section>
+	<section id="why-invest-in-a-mid-south-web-designs-site">
+		<ContentContainer>
+			<div class="col-span-4 sm:col-start-5 xl:col-span-6 xl:col-start-7 space-y-6">
+				<h2 class="font-bold text-xl">Why Invest In A Website Now</h2>
+				<p>Your website is the central piece to all of your marketing and related content around your business. From landing pages linked to facebook ads and project galleries to showcase previous client work. A great website is needed to help customers move and navigate through the landscape.</p>
+				<p>Our goal with you, is to provide you with a solution that completely guides your customers through that experience. By starting with the basics, we are able to design and optimize elements just how we want. This level of control can only come with 100% custom code, not squarespace, not wix or any other page builder out there.</p>
+			</div>
+		</ContentContainer>
+	</section>
+	<section id="what-we-do-at-mid-south-web-designs">
+		<ContentContainer>
+			<div class="col-span-full space-y-6">
+				<h2 class="font-bold text-xl text-center">Things Mid South Web Designs Do</h2>
+				<div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-x-8">
+					<ItemBlock 
+						imgUrl="https://thewebsitearchitect.com/wp-content/uploads//2020/12/website-speed-optimization.svg"
+						imgAlt='Mid South Web Designs Speed Optimized Icon'
+						name='Speed Optimized'
+						desc='Your site will be developed with speed optimization in mind and performance in mind. No site should be slow for its users losing out on customers.'
+					/>
+					<ItemBlock 
+						imgUrl="https://thewebsitearchitect.com/wp-content/uploads//2020/12/conversion-optimized-website.svg"
+						imgAlt='Mid South Web Designs Conversion Optimized Icon'
+						name='Conversion Optimized'
+						desc='I know the little tricks that can push people to convert from a visitor to a customer. I help make your site pay for itself.'
+					/>
+					<ItemBlock 
+						imgUrl="https://thewebsitearchitect.com/wp-content/uploads//2020/12/responsive-web-design.svg"
+						imgAlt='Mid South Web Designs Mobile Optimized Icon'
+						name='Mobile Optimized'
+						desc='52% of people are viewing websites on a phone. I know its more than just important so its standard that every page is responsive.'
+					/>
+					<ItemBlock 
+						imgUrl="https://thewebsitearchitect.com/wp-content/uploads//2020/12/seo-optimized-web-design.svg"
+						imgAlt='Mid South Web Designs SEO Optimized Icon'
+						name='SEO Optimized'
+						desc='SEO is the next important step after launching your website. Your site will follow the best SEO practices to begin its ranking.'
+					/>
+					<ItemBlock 
+						imgUrl="https://thewebsitearchitect.com/wp-content/uploads//2020/12/006-website-design.svg"
+						imgAlt='Mid South Web Designs Branded For You Icon'
+						name='Branded For You'
+						desc='All of our sites are 100% hand coded to perfectly agiln with your brand image. This gives you the best advantage over any other competitor using cookie cutter themes.'
+					/>
+					<ItemBlock 
+						imgUrl="https://thewebsitearchitect.com/wp-content/uploads//2020/12/customizable-websites.svg"
+						imgAlt='Mid South Web Designs Site Reporting Icon'
+						name='Site Reporting'
+						desc='Each month see how your site is doing. Down to the traffic and engagement, we will provide you with monthly reports of your websites. So you can see what is working and what to improve.'
+					/>
+				</div>
+			</div>
+		</ContentContainer>
+	</section>
+</Layout>
+<style>
+	#hero {
+		background: rgb(0,33,85);
+		background: linear-gradient(180deg, rgba(0,33,85,1) 0%, rgba(29,5,12,1) 100%, rgba(0,0,0,0) 100%);
+	}
+	h1, #hero p {
+		color: white;
+	}
+</style>
