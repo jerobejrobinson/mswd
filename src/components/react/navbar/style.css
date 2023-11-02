@@ -1,111 +1,144 @@
 * {
     box-sizing: border-box;
     margin: 0;
-  }
-  #mobile-menu {
+}
+#mobileMenu {
     position: relative;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 4rem;
     box-shadow: 0 2px rgba(0,0,0,.07);
-    
+    max-width: 1560px;
+    z-index: 2000;
     & img {
-      width: 192px;
-      height: auto;
-      object-fit: contain;
+        margin-left: 2rem;
+        width: 192px;
+        height: auto;
+        object-fit: contain;
     }
-  }
-  .hamburger {
+}
+.hamburger {
     position: relative;
-  /*   display: inline-block; */
     height: 20px;
     width: 20px;
-    
+    margin-right: 2rem;
     & span {
-      position: absolute;
-      display: inline-block;
-      background: black;
-      height: 5px;
-      width: 100%;
-      transition: all ease-in-out .2s;
+        position: absolute;
+        display: inline-block;
+        background: black;
+        height: 5px;
+        width: 100%;
+        transition: all ease-in-out .2s;
     }
-  
+
     & span:nth-child(2) {
-      width: 80%;
+        width: 80%;
     }
     & span:nth-child(3) {
-      top: 50%;
+        top: 50%;
     }
     & span:nth-child(4) {
-      top: 50%;
+        top: 50%;
     }
     & span:nth-child(5) {
-      top: 100%;
+        top: 100%;
     }
     & span:nth-child(6) {
-      top: 100%;
-      width: 120%;
+        top: 100%;
+        width: 120%;
     }
-  
+
     & span:nth-child(odd) {
-      border-top-left-radius: 25px;
-      border-bottom-left-radius: 25px;
-      left: 0%;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        left: 0%;
     }
-  
+
     & span:nth-child(even) {
-      border-top-right-radius: 25px;
-      border-bottom-right-radius: 25px;
-      left: 50%;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        left: 50%;
     }
-  }
-  .hamburger:hover {
+    &.active {
+        & span:nth-child(3) {
+            left: -100%;
+            opacity: 0;
+        }
+        & span:nth-child(4) {
+            left: 140%;
+            opacity: 0;
+        }
+        & span:nth-child(1) {
+            transform: translateY(100%) translateX(-12%) rotate(45deg) !important;
+        }
+        & span:nth-child(2) {
+            width: 100%;
+            transform: translateY(100%) rotate(-45deg) !important;
+        }
+    
+        & span:nth-child(5) {
+            transform: translateY(-100%)  translateX(-12%) rotate(-45deg) !important;
+        }
+        & span:nth-child(6) {
+            width: 100%;
+            transform: translateY(-100%) rotate(45deg) !important;
+        }
+    }
+}
+.hamburger:hover {
+    cursor: pointer;
     & span:nth-child(1) {
-      transform: translateY(50%);
+        transform: translateY(50%);
     }
     & span:nth-child(2) {
-      transform: translateY(50%);
+        transform: translateY(50%);
     }
     & span:nth-child(5) {
-      transform: translateY(-50%);
+        transform: translateY(-50%);
     }
     & span:nth-child(6) {
-      transform: translateY(-50%);
+        transform: translateY(-50%);
     }
-  }
-  .active {
-    & span:nth-child(3) {
-      left: -100%;
-      opacity: 0;
+}
+
+#menuLinks {
+    height: 100%;
+    
+    & a {
+        padding: 2rem 2rem;
+        display: block;
+        height: 100%;
+        border-bottom: #fff solid 5px;
+        transition: all ease-in-out .5s;
+        font-size: 1rem;
+
+        &:hover {
+            border-bottom: #002174 solid 5px;
+        }
     }
-    & span:nth-child(4) {
-      left: 140%;
-      opacity: 0;
-    }
-    & span:nth-child(1) {
-      transform: translateY(100%) translateX(-12%) rotate(45deg) !important;
-    }
-    & span:nth-child(2) {
-      width: 100%;
-      transform: translateY(100%) rotate(-45deg) !important;
-    }
-  
-    & span:nth-child(5) {
-      transform: translateY(-100%)  translateX(-12%) rotate(-45deg) !important;
-    }
-    & span:nth-child(6) {
-      width: 100%;
-      transform: translateY(-100%) rotate(45deg) !important;
-    }
-  }
-  #hidden-menu {
+}
+
+#mobileMenuLinks {
+    transition: all ease-in-out .2s;
     position: absolute;
+    padding: 8rem 0;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-between;
-    top: 100%;
-    background: red;
-  }
+    transform: scale(1);
+    left: -100%;
+    
+    &.active {
+        transform: scale(1);
+        left: 0;
+    }
+}

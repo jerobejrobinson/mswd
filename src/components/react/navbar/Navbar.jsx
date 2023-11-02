@@ -2,17 +2,37 @@ import React, { useState } from "react";
 import './style.css'
 
 export default function Navbar() {
+    const [click, setClick] = useState(false)
+    const handleClick = () => {
+        setClick(prev => !prev)
+    }
     return (
-        <nav id="mobile-menu">
-            <img src="https://ucarecdn.com/dbe39d68-f5f5-4692-9957-10299d4f650e/-/preview/500x500/-/quality/smart_retina/-/format/auto/" alt="Mid-South Web Designs Logo" />
-            <div  class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>  
+        <>
+            <nav id="mobileMenu">
+                <a href="/">
+                    <img src="https://ucarecdn.com/dbe39d68-f5f5-4692-9957-10299d4f650e/-/preview/500x500/-/quality/smart_retina/-/format/auto/" alt="Mid-South Web Designs Logo" />
+                </a>
+                <div className={`hamburger my-6 md:hidden ${click && 'active'}`} onClick={handleClick}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div id="menuLinks" className="hidden md:flex flex-row">
+                    <a href="/about">About</a>
+                    <a href="/about">Services</a>
+                    <a href="/about">Projects</a>
+                    <a href="/about">Contact</a>
+                </div>
+            </nav>
+            <nav id="mobileMenuLinks" className={`${click && 'active'}`}>
+                <a href="/about">About</a>
+                <a href="/about">Services</a>
+                <a href="/about">Projects</a>
+                <a href="/about">Contact</a>
+            </nav>
+        </>
     )
 }

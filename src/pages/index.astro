@@ -4,8 +4,8 @@ import Navbar from '../components/react/navbar/Navbar';
 import ContentContainer from '../components/ContentContainer.astro';
 import ItemBlock from '../components/ItemBlock.astro';
 ---
-<Navbar />
 <Layout title="Mid-South Web Designs & Development | A Marketing Service">
+	<Navbar client:load/>
 	<section id="hero" class=" h-screen">
 		<ContentContainer>
 			<div class="col-span-4 sm:col-span-6 space-y-6">
@@ -39,37 +39,37 @@ import ItemBlock from '../components/ItemBlock.astro';
 				<h2 class="font-bold text-xl text-center">Things Mid South Web Designs Do</h2>
 				<div class="grid sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-x-8">
 					<ItemBlock 
-						imgUrl="https://thewebsitearchitect.com/wp-content/uploads//2020/12/website-speed-optimization.svg"
+						imgUrl="icons/website-speed-optimization.svg"
 						imgAlt='Mid South Web Designs Speed Optimized Icon'
 						name='Speed Optimized'
 						desc='Your site will be developed with speed optimization in mind and performance in mind. No site should be slow for its users losing out on customers.'
 					/>
 					<ItemBlock 
-						imgUrl="https://thewebsitearchitect.com/wp-content/uploads//2020/12/conversion-optimized-website.svg"
+						imgUrl="icons/conversion-optimized-website.svg"
 						imgAlt='Mid South Web Designs Conversion Optimized Icon'
 						name='Conversion Optimized'
 						desc='I know the little tricks that can push people to convert from a visitor to a customer. I help make your site pay for itself.'
 					/>
 					<ItemBlock 
-						imgUrl="https://thewebsitearchitect.com/wp-content/uploads//2020/12/responsive-web-design.svg"
+						imgUrl="icons/responsive-web-design.svg"
 						imgAlt='Mid South Web Designs Mobile Optimized Icon'
 						name='Mobile Optimized'
 						desc='52% of people are viewing websites on a phone. I know its more than just important so its standard that every page is responsive.'
 					/>
 					<ItemBlock 
-						imgUrl="https://thewebsitearchitect.com/wp-content/uploads//2020/12/seo-optimized-web-design.svg"
+						imgUrl="icons/seo-optimized-web-design.svg"
 						imgAlt='Mid South Web Designs SEO Optimized Icon'
 						name='SEO Optimized'
 						desc='SEO is the next important step after launching your website. Your site will follow the best SEO practices to begin its ranking.'
 					/>
 					<ItemBlock 
-						imgUrl="https://thewebsitearchitect.com/wp-content/uploads//2020/12/006-website-design.svg"
+						imgUrl="icons/006-website-design.svg"
 						imgAlt='Mid South Web Designs Branded For You Icon'
 						name='Branded For You'
 						desc='All of our sites are 100% hand coded to perfectly agiln with your brand image. This gives you the best advantage over any other competitor using cookie cutter themes.'
 					/>
 					<ItemBlock 
-						imgUrl="https://thewebsitearchitect.com/wp-content/uploads//2020/12/customizable-websites.svg"
+						imgUrl="icons/customizable-websites.svg"
 						imgAlt='Mid South Web Designs Site Reporting Icon'
 						name='Site Reporting'
 						desc='Each month see how your site is doing. Down to the traffic and engagement, we will provide you with monthly reports of your websites. So you can see what is working and what to improve.'
