@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/react/navbar/Navbar';
 import ContentContainer from '../components/ContentContainer.astro';
 import ItemBlock from '../components/ItemBlock.astro';
+import Button from '../components/Button.astro';
 ---
 <Layout title="Mid-South Web Designs & Development | A Marketing Service">
 	<Navbar client:load/>
@@ -11,7 +12,7 @@ import ItemBlock from '../components/ItemBlock.astro';
 			<div class="col-span-4 sm:col-span-6 space-y-6 self-center">
 				<h1 class="text-2xl xl:text-4xl font-bold">We Make The Best Websites For Your Small Business</h1>
 				<p class="leading-loose">With our 2 - 4 week turnaround time, we can get you on the ground rolling fast. Our expertise specialize in providing websites without all of the fluff. Completely hand coded to provide you and your customers with the ultimate user experience.</p>
-				<a href="/contact" class="block px-8 py-2 bg-white text-black rounded text-center text-xl">Get In Touch</a>
+				<Button link="/contact" main={true}>Get In Touch</Button> 
 			</div>
 			<div class="col-span-4 sm:col-span-2 xl:col-span-6 hidden xl:block">
 				<img src="/main/mock-up-replace.png" alt="" class="w-ful h-full object-contain">
@@ -23,16 +24,20 @@ import ItemBlock from '../components/ItemBlock.astro';
 			<div class="col-span-4 xl:col-span-6 space-y-6">
 				<h2 class="font-bold text-xl">Who I Am</h2>
 				<p class=" leading-relaxed">Based in Memphis, Tn we come with years of development and design experience to help your business establish web visibility. Our services are meant to provide you with complete ease as we handle design, maintenance, and updates. Think of us as part of your team completely dedicated to managing and monitoring your website.</p>
-				<a href="/about-us" class="block px-8 py-2 bg-[#002147] text-white rounded text-center text-xl xl:w-1/2 xl:text-base">Learn More</a>
+				<Button link="/about-us" main={false} >Learn More</Button> 
 			</div>
 		</ContentContainer>
 	</section>
 	<section id="why-invest-in-a-mid-south-web-designs-site">
 		<ContentContainer>
-			<div class="col-span-4 sm:col-start-5 xl:col-span-6 xl:col-start-7 space-y-6">
+			<div class="col-span-4 xl:col-span-6">
+				<img src="/main/book.png" alt="" class="w-full h-96 object-contain">
+			</div>
+			<div class="col-span-4 xl:col-span-6 space-y-6">
 				<h2 class="font-bold text-xl">Why Invest In A Website Now</h2>
 				<p>Your website is the central piece to all of your marketing and related content around your business. From landing pages linked to facebook ads and project galleries to showcase previous client work. A great website is needed to help customers move and navigate through the landscape.</p>
 				<p>Our goal with you, is to provide you with a solution that completely guides your customers through that experience. By starting with the basics, we are able to design and optimize elements just how we want. This level of control can only come with 100% custom code, not squarespace, not wix or any other page builder out there.</p>
+				<Button link="/blog/why-invest-in-a-website-now" main={false} >Read More</Button> 
 			</div>
 		</ContentContainer>
 	</section>
@@ -81,6 +86,31 @@ import ItemBlock from '../components/ItemBlock.astro';
 			</div>
 		</ContentContainer>
 	</section>
+	<section>
+		<ContentContainer>
+			<h2 class="font-bold text-2xl xl:text-3xl text-center col-span-full my-8">Services & Pricing</h2>
+			<div class="col-span-4 xl:col-start-3 mb-4">
+				<h3 class="font-bold text-xl text-center bg-blue-200 p-4 rounded-t-xl">Web Design & Maintenance</h3>
+				<ul class="p-8 border border-blue-200 border-b-0 space-y-4">
+					<li class="flex items-center"><img src="/icons/success.png" alt="checkmark" class="mr-6">*5 Page Business Site</li>
+					<li class="flex items-center"><img src="/icons/success.png" alt="checkmark" class="mr-6">Optimized On Page SEO</li>
+					<li class="flex items-center"><img src="/icons/success.png" alt="checkmark" class="mr-6">Google Analytics</li>
+					<li class="flex items-center"><img src="/icons/success.png" alt="checkmark" class="mr-6">Unlimited Update Requests</li>
+				</ul>
+				<p class="font-bold italic text-2xl text-center bg-blue-200 p-4 rounded-b-xl">$150/mo</p>
+			</div>
+			<div class="col-span-4">
+				<h3 class="font-bold text-xl text-center bg-blue-200 p-4 rounded-t-xl">Off Site SEO & Blogging</h3>
+				<ul class="p-8 border border-blue-200 border-b-0 space-y-4">
+					<li class="flex items-center"><img src="/icons/success.png" alt="checkmark" class="mr-6">Includes Main Service</li>
+					<li class="flex items-center"><img src="/icons/success.png" alt="checkmark" class="mr-6">High Quality Content Creation</li>
+					<li class="flex items-center"><img src="/icons/success.png" alt="checkmark" class="mr-6">Keyword Research & Tracking</li>
+					<li class="flex items-center"><img src="/icons/success.png" alt="checkmark" class="mr-6">Link Building Outreach</li>
+				</ul>
+				<p class="font-bold italic text-2xl text-center bg-blue-200 p-4 rounded-b-xl">$150/mo + SEO Budget</p>
+			</div>
+		</ContentContainer>
+	</section>
 </Layout>
 <style>
 	#hero {
@@ -93,6 +123,5 @@ import ItemBlock from '../components/ItemBlock.astro';
 	#what-we-do-at-mid-south-web-designs {
 		background-image: url('/backgrounds/daimond-squares.jpg');
 		background-size: contain;
-
 	}
 </style>

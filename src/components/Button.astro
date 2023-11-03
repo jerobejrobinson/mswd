@@ -1,0 +1,12 @@
+---
+interface Props {
+    link: string;
+    main: boolean;
+}
+
+const {link, main} = Astro.props
+---
+{main ? 
+<a href={link} class={`block px-8 py-2 bg-white text-black rounded text-center text-xl xl:w-1/2 xl:text-base`}><slot/></a> :
+<a href={link} class={`block px-8 py-2 bg-[#002147] text-white rounded text-center text-xl xl:w-1/2 xl:text-base`}><slot/></a>
+}
