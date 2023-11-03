@@ -10,7 +10,7 @@ export default function Navbar() {
         <>
             <nav id="mobileMenu">
                 <a href="/">
-                    <img src="https://ucarecdn.com/dbe39d68-f5f5-4692-9957-10299d4f650e/-/preview/500x500/-/quality/smart_retina/-/format/auto/" alt="Mid-South Web Designs Logo" />
+                    <img src="/main/mswd-logo.svg" alt="Mid-South Web Designs Logo" />
                 </a>
                 <div className={`hamburger my-6 md:hidden ${click && 'active'}`} onClick={handleClick}>
                     <span></span>
