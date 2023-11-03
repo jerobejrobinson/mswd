@@ -21,17 +21,17 @@ export default function Navbar() {
                     <span></span>
                 </div>
                 <div id="menuLinks" className="hidden md:flex flex-row">
-                    <a href="/about">About</a>
-                    <a href="/about">Services</a>
-                    <a href="/about">Projects</a>
-                    <a href="/about">Contact</a>
+                    <a href="/about-us">About</a>
+                    <a href="/services">Services</a>
+                    <a href="/projects">Projects</a>
+                    <a href="/contact">Contact</a>
                 </div>
             </nav>
             <nav id="mobileMenuLinks" className={`${click && 'active'}`}>
-                <a href="/about">About</a>
-                <a href="/about">Services</a>
-                <a href="/about">Projects</a>
-                <a href="/about">Contact</a>
+                <a href="/about-us">About</a>
+                <a href="/services">Services</a>
+                <a href="/projects">Projects</a>
+                <a href="/contact">Contact</a>
             </nav>
         </>
     )
